@@ -13,16 +13,17 @@ import giveDrop from '../../../assets/images/Header/give-about.png';
 
 function HamMenu(){
 
+
     const toggleHam = (event) =>{
 
         let clickedHam = event.target;
 
-        if(clickedHam.style.height==="83.5px"){
+        if(clickedHam.style.height==="78.5px"){
             clickedHam.style.height="100%"
             clickedHam.querySelector('.ham-drop-title').children[1].innerText='-'
         }
         else if(clickedHam.style.height==="100%"){
-            clickedHam.style.height="83.5px"
+            clickedHam.style.height="78.5px"
             clickedHam.querySelector('.ham-drop-title').children[1].innerText='+'
         }
     
@@ -30,7 +31,7 @@ function HamMenu(){
 
     return(
         <div className="ham-menu" style={{ display: "none" }}>
-            <div className="ham-drop" style={{height:"83.5px"}} onClick={(event) => toggleHam(event)}>
+            <div className="ham-drop" style={{height:"78.5px"}} onClick={(event) => toggleHam(event)}>
                 <div className="ham-drop-title">
                     <h3>Shop</h3>
                     <p>+</p>
@@ -98,7 +99,7 @@ function HamMenu(){
                     </div>
                 </div>
             </div>
-            <div className="ham-drop" style={{height:"83.5px"}} onClick={(event) => toggleHam(event)}>
+            <div className="ham-drop" style={{height:"78.5px"}} onClick={(event) => toggleHam(event)}>
                 <div className="ham-drop-title">
                     <h3>Health Benefits</h3>
                     <p>+</p>
@@ -153,7 +154,7 @@ function HamMenu(){
                 
                 
             </div>
-            <div className="ham-drop" style={{height:"83.5px"}} onClick={(event) => toggleHam(event)}>
+            <div className="ham-drop" style={{height:"78.5px"}} onClick={(event) => toggleHam(event)}>
                 <div className="ham-drop-title">
                     <h3>About</h3>
                     <p>+</p>

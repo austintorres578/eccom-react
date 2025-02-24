@@ -1,4 +1,5 @@
-import {React,useState} from 'react';
+import { React, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import '../../../assets/styles/header/Header.css';
 
@@ -20,109 +21,123 @@ import AmericanFlag from '../../../assets/images/Header/american-flag.jpeg';
 import HalfStar from '../../../assets/images/Header/Half_Star.png';
 import FullStar from '../../../assets/images/Header/Full_Star.png';
 
-import BlueShopImg from '../../../assets/images/Header/blue-shop-img.png';
-import YellowShopImg from '../../../assets/images/Header/yellow-shop-img.png';
-import OrangeShopImg from '../../../assets/images/Header/orange-shop-img.png';
-import GreenShopImg from '../../../assets/images/Header/green-shop-img.png';
-import BrownShopImg from '../../../assets/images/Header/brown-shop-img.png';
+function Header() {
+    const [CurrentDropDown, SetCurrentDropdown] = useState(null);
+    const [cartCount, setCartCount] = useState(0);
 
+    const [ButtonSliderText, SetButtonSliderText] = useState(
+        <p className="shipping-orders">Get free shipping on orders over $50!</p>
+    );
 
+    // Function to update cart count
+    const updateCartCount = () => {
+        const cart = JSON.parse(localStorage.getItem('AustinSoylentCart')) || [];
+        setCartCount(cart.length);
+    };
 
+    useEffect(() => {
+        updateCartCount(); // Initial load
 
-function Header(){
+        // Listen for localStorage changes (from other tabs)
+        const handleStorageChange = (event) => {
+            if (event.key === 'AustinSoylentCart') {
+                updateCartCount();
+            }
+        };
+        window.addEventListener('storage', handleStorageChange);
 
-    const [CurrentDropDown,SetCurrentDropdown] = useState(null);
+        // Poll every 500ms to detect localStorage changes in the same tab
+        const interval = setInterval(updateCartCount, 500);
 
-    const [ButtonSliderText,SetButtonSliderText] = useState(<p className="shipping-orders">get free shipping in orders over $50!</p>)
+        return () => {
+            window.removeEventListener('storage', handleStorageChange);
+            clearInterval(interval); // Cleanup interval on unmount
+        };
+    }, []);
 
-    let changeButtonSliderText = (event) =>{
+    const revealCart = () => {
+        let cartWrapper = document.querySelector('.cart-wrapper');
+        let yourCart = document.querySelector('.your-cart');
+        let body = document.querySelector('body');
 
-        let sliderTextClass = event.target.parentNode.children[1].children[0].className
+        cartWrapper.style.opacity = 1;
+        cartWrapper.style.pointerEvents = "all";
+        yourCart.style.right = "0px";
 
-        let newSliderText;
-        
-        if(sliderTextClass==='shipping-orders'){
-            newSliderText = 
-            <div className="star-flex">
-                <p>over 18,000</p>
-                <div>
-                    <img src={FullStar}></img>
-                    <img src={FullStar}></img>
-                    <img src={FullStar}></img>
-                    <img src={FullStar}></img>
-                    <img src={HalfStar}></img>
-                </div>
-                <p>reviews!</p>
-                <a href="#">see reviews</a>
-            </div>;
-            SetButtonSliderText(newSliderText)
-        }else{
-            newSliderText=<p className="shipping-orders">get free shipping in orders over $50!</p>;
-            SetButtonSliderText(newSliderText);
-        }
+        body.style.overflow = 'hidden'; // Disables scrolling
+        body.style.touchAction = 'none'; // Prevents touch gestures from triggering scroll
+        body.style.overscrollBehavior = 'none'; // Stops scroll chaining
+    };
 
-    }
-
-    let moveNavDropdown = (event,direction) =>{
-
-        let dropdown;
-
-        let navLinkText
-
+    const moveNavDropdown = (event, direction) => {
         let navDrop = document.querySelector('.nav-dropdown-con');
+        let navLinkText;
 
-        if(direction==='up' && navDrop){
-            navDrop.style.top="-500%";
-        }else if(direction==='down' && navDrop){
-            navDrop.style.top="100%";
+        if (direction === 'up' && navDrop) {
+            navDrop.style.top = "-500%";
+        } else if (direction === 'down' && navDrop) {
+            navDrop.style.top = "100%";
             navLinkText = event.target.innerText;
         }
 
-        if(navLinkText==="SHOP"){
-            dropdown=<ShopDropDown/>
-            SetCurrentDropdown(dropdown)
-        }else if(navLinkText==="HEALTH BENEFITS"){
-            dropdown=<HealthDropDown/>
-            SetCurrentDropdown(dropdown)
+        if (navLinkText === "SHOP") {
+            SetCurrentDropdown(<ShopDropDown />);
+        } else if (navLinkText === "HEALTH BENEFITS") {
+            SetCurrentDropdown(<HealthDropDown />);
+        } else if (navLinkText === "ABOUT") {
+            SetCurrentDropdown(<AboutDropDown />);
         }
-        else if(navLinkText==="ABOUT"){
-            dropdown=<AboutDropDown/>
-            SetCurrentDropdown(dropdown)
-        }
-
-        console.log(navLinkText)
-
     };
 
-    let intervalId;
+    const changeButtonSliderText = () => {
+        let currentText = ButtonSliderText.props.className;
+        let newSliderText;
 
-    let intervalTime = 5000; 
+        if (currentText === 'shipping-orders') {
+            newSliderText = (
+                <div className="star-flex">
+                    <p>Over 18,000</p>
+                    <div>
+                        <img src={FullStar} alt="Full Star" />
+                        <img src={FullStar} alt="Full Star" />
+                        <img src={FullStar} alt="Full Star" />
+                        <img src={FullStar} alt="Full Star" />
+                        <img src={HalfStar} alt="Half Star" />
+                    </div>
+                    <p>Reviews!</p>
+                    <a href="#">See reviews</a>
+                </div>
+            );
+        } else {
+            newSliderText = <p className="shipping-orders">Get free shipping on orders over $50!</p>;
+        }
 
-    function startLogging() {
-        clearInterval(intervalId); // Clear any existing interval
-        intervalId = setInterval(() => {
-          console.log("hi");
-        }, intervalTime);
-    }
+        SetButtonSliderText(newSliderText);
+    };
 
-    return(
+    return (
         <header>
+            <div className="site-nav">
+                <p>Available Pages</p>
+                <div>
+                    <Link to="/">Home</Link>
+                    <Link to="/products">Products</Link>
+                </div>
+            </div>
             <div className='top-nav'>
                 <div className='top-nav-socials'>
-                    <a href='#'><img src={InstagramLogo}></img></a>
-                    <a href='#'><img src={TiktokLogo}></img></a>
-                    <a href='#'><img src={RedditLogo}></img></a>
+                    <a href='#'><img src={InstagramLogo} alt="Instagram" /></a>
+                    <a href='#'><img src={TiktokLogo} alt="TikTok" /></a>
+                    <a href='#'><img src={RedditLogo} alt="Reddit" /></a>
                 </div>
                 <div className='top-nav-slider'>
-                    <button onClick={(event)=>changeButtonSliderText(event)}>‹</button>
-                    <div>
-                        {ButtonSliderText}
-                    </div>
-                    <button onClick={(event)=>changeButtonSliderText(event)}>›</button>
+                    <button onClick={changeButtonSliderText}>‹</button>
+                    <div>{ButtonSliderText}</div>
+                    <button onClick={changeButtonSliderText}>›</button>
                 </div>
                 <div className='store-locator'>
                     <a href="#" className="store-locator-link">Store Locator</a>
-                    <img className='flag-icon' src={AmericanFlag}></img>
+                    <img className='flag-icon' src={AmericanFlag} alt="American Flag" />
                     <div className='flag-con'>
                         <a className='united-states-link' href='#'>United States</a>
                         <a className='canada-link' href='#'>Canada</a>
@@ -132,41 +147,40 @@ function Header(){
             </div>
             <div className='main-nav'>
                 <a href='/' className='header-logo'>
-                    <img src={HeaderLogo}></img>
+                    <img src={HeaderLogo} alt="Soylent Logo" />
                 </a>
                 <ul className='desk-nav'>
-                    <li onPointerOver={(event) => moveNavDropdown(event,'down')} onPointerLeave={(event) => moveNavDropdown(event,'up')}><a href='#'>Shop</a></li>
-                    <li onPointerOver={(event) => moveNavDropdown(event,'down')} onPointerLeave={(event) => moveNavDropdown(event,'up')}><a href='#'>Health Benefits</a></li>
-                    <li onPointerOver={(event) => moveNavDropdown(event,'down')} onPointerLeave={(event) => moveNavDropdown(event,'up')}><a href='#'>About</a></li>
+                    <li onPointerOver={(event) => moveNavDropdown(event, 'down')} onPointerLeave={(event) => moveNavDropdown(event, 'up')}>
+                        <a href='#'>Shop</a>
+                    </li>
+                    <li onPointerOver={(event) => moveNavDropdown(event, 'down')} onPointerLeave={(event) => moveNavDropdown(event, 'up')}>
+                        <a href='#'>Health Benefits</a>
+                    </li>
+                    <li onPointerOver={(event) => moveNavDropdown(event, 'down')} onPointerLeave={(event) => moveNavDropdown(event, 'up')}>
+                        <a href='#'>About</a>
+                    </li>
                     <li><a href='#'>Why Soy?</a></li>
                     <li><a href='#'>Clinical Trials</a></li>
                     <li><a href='#'>Reviews</a></li>
                     <li><a href='#'>Product Quiz</a></li>
                 </ul>
                 <div className='nav-account-icons'>
-                    <a href='#'><img src={AccountLogo}></img></a>
-                    <a href='#'><img src={CartLogo}></img></a>
+                    <a href='#'><img src={AccountLogo} alt="Account" /></a>
+                    <button className="cart-button" onClick={revealCart}>
+                        <img src={CartLogo} alt="Cart" />
+                        {cartCount > 0 && (
+                            <p className="cart-count">{cartCount}</p>
+                        )}
+                    </button>
                 </div>
             </div>
-            <div className='tablet-nav-con'>
-                <ul className='tablet-nav'>
-                    <li><a href='#'>Shop</a></li>
-                    <li><a href='#'>Health Benefits</a></li>
-                    <li><a href='#'>About</a></li>
-                    <li><a href='#'>Why Soy?</a></li>
-                    <li><a href='#'>Clinical Trials</a></li>
-                    <li><a href='#'>Reviews</a></li>
-                    <li><a href='#'>Product Quiz</a></li>
-                </ul>
-            </div>
-            <div className='nav-dropdown-con' onPointerOver={(event) => moveNavDropdown(event,'down')} onPointerLeave={(event) => moveNavDropdown(event,'up')}>
+            <div className='nav-dropdown-con' onPointerOver={(event) => moveNavDropdown(event, 'down')} onPointerLeave={(event) => moveNavDropdown(event, 'up')}>
                 {CurrentDropDown}
             </div>
             <MobileHeader />
             <HamMenu />
-    
         </header>
-    )
+    );
 }
 
 export default Header;

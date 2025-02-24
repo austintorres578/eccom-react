@@ -10,6 +10,7 @@ import BrownShopImg from '../../../../assets/images/Header/brown-shop-img.png';
 function ShopDropDown(){
     return(
         <div className='nav-dropdown shop-drop'>
+                <div className="shop-drop-wrapper">
                     <div>
                         <a href='#' className='shop-row'>
                             <div className='image-slider blue-slider'>
@@ -73,6 +74,7 @@ function ShopDropDown(){
                         </div>
                     </div>
                 </div>
+        </div>
     )
 }
 
