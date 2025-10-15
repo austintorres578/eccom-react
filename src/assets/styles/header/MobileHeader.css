@@ -1,4 +1,4 @@
-@media(max-width:680px){
+@media(max-width:765px){
     body .mobile-header{
         display: flex;
     }
@@ -14,6 +14,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    background-color: white;
 }
 
 .mobile-header a{
@@ -25,6 +26,7 @@
     border: none;
     background-color: white;
     cursor: pointer;
+    width: auto;
 }
 
 .mobile-header button img{
@@ -44,6 +46,12 @@
     margin:0px 5px 0px 5px;
 }
 
+.mobile-account button img{
+    height: 35px;    
+    width: auto;
+    object-fit:contain;
+}
+
 .mobile-account a img{
     height: 30px;
     width: auto;
@@ -57,4 +65,17 @@
     width:68.3px;
     display: flex;
     justify-content: start;
+}
+
+.cart-button{
+    position: relative;
+}
+
+.cart-count{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: 3px;
+    margin-bottom: 0px;
 }

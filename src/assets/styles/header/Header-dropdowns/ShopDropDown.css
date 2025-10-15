@@ -11,6 +11,12 @@
 
 .nav-dropdown {
     padding: 0px 50px;
+}
+
+.shop-drop-wrapper{
+    max-width:1250px;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: 50% 50%;
 }

@@ -9,14 +9,51 @@
 
 @media(max-width:530px){
     body .ham-about-grid a{
-        height: 365px;
+        height: 320px;
     }
+
+    body .ham-about-content .ham-about-grid a img {
+        height: 190px;
+    }
+
+    body #ham-about-flex a div {
+        padding: 5px;
+    }
+
+    body .ham-about-content .ham-about-grid div{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px;
+        height: 37%;
+    }
+
+    
+
 }
 
 @media(max-width:400px){
     body .shop-ham-block{
         width: auto;
     }
+    body .ham-about-content .ham-about-grid strong{
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 95px;
+    }
+
+    body .ham-about-content .ham-about-grid a img{
+        height:165px
+    }
+
+        body .ham-about-grid a {
+            height: 295px;
+        }
+}
+
+.ham-menu{
+    background-color: white;
 }
 
 .ham-menu .ham-drop{
@@ -246,6 +283,7 @@
 .ham-health-block .health-button-col a{
     margin-bottom: 15px;
     width: 100%;
+    color: black;
 }
 
 .ham-health-block .health-button-col a button{
@@ -258,6 +296,7 @@
     font-weight: bold;
     transition: .5s;
     cursor: pointer;
+    color: black;
 }
 
 .ham-health-block .health-button-col a button:hover{
