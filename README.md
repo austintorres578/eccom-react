@@ -26,9 +26,7 @@ Developed using **React** on the frontend and a secure **Express.js backend** to
 <!-- ========== UI Showcase Section (Add Images Later) ========== -->
 <!-- Quick Nav -->
 <img src="public/soylent-quick-nav.png" width="500" height="auto" />
-<br><br />
 <p>Quick Nav to quickly go through the two created pages</p>
-<br><br />
 <!-- Test Credit Card and project details -->
 <img src="public/soylent-test-card.jpeg" width="437.99" height="233.66" />
 <br><br />
