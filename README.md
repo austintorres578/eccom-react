@@ -16,7 +16,7 @@ Developed using **React** on the frontend and a secure **Express.js backend** to
   <li>Responsive layout inspired by Soylent’s design system</li>
   <li>Focus on smooth UX with animations and transitions</li>
   <li>Secure backend routes for payment processing, with accurate pricing to the products</li>
-  <li>Goal: Replicate a professional DTC e-commerce experience from browsing to checkout</li>
+  <li>Goal: Replicate a professional e-commerce experience from browsing to checkout</li>
   <li>Uses local storage to save products added to cart</li>
 </ul>
 
