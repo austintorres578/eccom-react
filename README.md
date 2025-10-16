@@ -40,7 +40,7 @@ Developed using **React** on the frontend and a secure **Express.js backend** to
 <img src="public/soylent-checkout.png" width="600" height="auto" />
 <p>Full checkout simulation powered by Stripe, using a secure Express backend to manage transactions, supporting subscription purchases, one-time purchases and prepaid subscriptions.</p>
 <!-- Product Page Screenshot -->
-<img src="public/soylant-cart.png" width="600" height="auto" />
+<img src="public/soylant-cart.png" width="auto" height="500" />
 <img src="public/soylent-product-types.png" width="600" height="auto" />
 <p>Each product page includes pricing, flavor options, descriptions, and “Add to Cart” functionality using local storage.</p>
 <!-- ========== TECH SECTION ========== -->
