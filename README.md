@@ -2,7 +2,7 @@
 
 <!-- Banner Image Placeholder -->
 <!-- Replace with an image like /public/readMeBanner.png -->
-<img src="public/readMeBanner.png" />
+<img src="public/Soylent-Logo.jpg" />
 
 A full-scale e-commerce clone inspired by **Soylent.com**, built to recreate a modern direct-to-consumer shopping experience.  
 This project includes **animated product browsing**, **add-to-cart functionality**, and a real **checkout flow powered by Stripe**, all wrapped in a UI thats as close to the official soylent design as possible.
