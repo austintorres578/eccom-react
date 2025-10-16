@@ -23,7 +23,6 @@ Developed using **React** on the frontend and a secure **Express.js backend** to
 <h2>Deployed on Netlify – <a href="https://symphonious-frangipane-463737.netlify.app/">Live Soylent E-Commerce Clone</a></h2>
 
 <a href="https://symphonious-frangipane-463737.netlify.app/">Visit the Live Site</a>
-<br><br />
 <!-- ========== UI Showcase Section (Add Images Later) ========== -->
 <!-- Quick Nav -->
 <img src="public/soylent-quick-nav.png" width="500" height="auto" />
