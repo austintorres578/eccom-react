@@ -28,6 +28,18 @@ Developed using **React** on the frontend and a secure **Express.js backend** to
 
 <!-- ========== UI Showcase Section (Add Images Later) ========== -->
 
+<!-- Quick Nav -->
+<img src="public/soylent-quick-nav.png" />
+<br><br />
+<p>Quick Nav to quickly go through the two created pages</p>
+<br><br />
+
+<!-- Test Credit Card and project details -->
+<img src="public/soylent-test-card.jpeg" />
+<br><br />
+<p>Project details as well as test credit card numbers to check out using stripes payment gateway</p>
+<br><br />
+
 <!-- Homepage Screenshot -->
 <img src="public/homepage.png" />
 <br><br />
