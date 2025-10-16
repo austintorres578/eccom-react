@@ -33,6 +33,9 @@ Developed using **React** on the frontend and a secure **Express.js backend** to
 <!-- Homepage Screenshot -->
 <img src="public/soylent-banner.png" />
 <p>Clean, minimalist storefront remake of Soylent’s original layout. Users can browse featured products and learn more about Soylents Products and Ingredients.</p>
+<!-- Animated Screenshot -->
+<img src="#" />
+<p>One of many animated sections within the site</p>
 <!-- Cart & Checkout Screenshot -->
 <img src="public/soylent-checkout.png" />
 <p>Full checkout simulation powered by Stripe, using a secure Express backend to manage transactions, supporting subscription purchases, one-time purchases and prepaid subscriptions.</p>
