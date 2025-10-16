@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+<h1>Soylent E-Commerce Clone</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- Banner Image Placeholder -->
+<!-- Replace with an image like /public/readMeBanner.png -->
+<img src="public/readMeBanner.png" />
 
-## Available Scripts
+A full-scale e-commerce clone inspired by **Soylent.com**, built to recreate a modern direct-to-consumer shopping experience.  
+This project includes **animated product browsing**, **add-to-cart functionality**, and a real **checkout flow powered by Stripe**, all wrapped in a responsive and minimalist UI.
 
-In the project directory, you can run:
+Developed using **React** on the frontend and a secure **Express.js backend** to simulate real-world payment processing.
 
-### `npm start`
+<ul>
+  <li>Built with React and Express.js</li>
+  <li>Custom product pages and cart logic</li>
+  <li>Integrated with Stripe Checkout (test mode)</li>
+  <li>Responsive layout inspired by Soylent’s design system</li>
+  <li>Focus on smooth UX with animations and transitions</li>
+  <li>Secure backend routes for payment processing</li>
+  <li>Goal: Replicate a professional DTC e-commerce experience from browsing to checkout</li>
+</ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h2>Deployed on Netlify – <a href="https://symphonious-frangipane-463737.netlify.app/">Live Soylent E-Commerce Clone</a></h2>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<a href="https://symphonious-frangipane-463737.netlify.app/">Visit the Live Site</a>
 
-### `npm test`
+<br><br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- ========== UI Showcase Section (Add Images Later) ========== -->
 
-### `npm run build`
+<!-- Homepage Screenshot -->
+<img src="public/homepage.png" />
+<br><br />
+<p>Clean, minimalist storefront inspired by Soylent’s original layout. Users can browse featured products and explore categories.</p>
+<br><br />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- Product Page Screenshot -->
+<img src="public/product-page.png" />
+<br><br />
+<p>Each product page includes pricing, flavor options, descriptions, and animated “Add to Cart” functionality.</p>
+<br><br />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- Cart & Checkout Screenshot -->
+<img src="public/checkout.png" />
+<br><br />
+<p>Full checkout simulation powered by Stripe, using a secure Express backend to manage transactions.</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- ========== TECH SECTION ========== -->
+<h2>Tech Used</h2>
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>React</li>
+  <li>Express.js</li>
+  <li>Stripe API (Checkout)</li>
+  <li>Netlify Deployment</li>
+</ul>
 
-### `npm run eject`
+<!-- ========== ABOUT ME ========== -->
+<h2>About Me</h2>
+<p>Thanks for taking the time to view this project! I built it to deepen my understanding of full-stack e-commerce flows — from frontend animations to secure backend payments.</p>
+<p>I’m currently open to new opportunities in Frontend or Full-Stack Development.</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<strong>My Links:</strong><br />
+<a href="mailto:austintorres578@gmail.com">austintorres578@gmail.com</a><br />
+<a href="https://austintorres578.github.io/Web-dev-portfolio/">Portfolio Site</a><br />
+<a href="https://github.com/austintorres578">GitHub</a><br />
+<a href="https://www.linkedin.com/in/austin-torres-55696420a/">LinkedIn</a>
