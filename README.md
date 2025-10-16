@@ -31,17 +31,17 @@ Developed using **React** on the frontend and a secure **Express.js backend** to
 <img src="public/soylent-test-card.jpeg" width="437.99" height="233.66" />
 <p>Project details as well as test credit card numbers to check out using stripes payment gateway</p>
 <!-- Homepage Screenshot -->
-<img src="public/soylent-banner.png" />
+<img src="public/soylent-banner.png" width="600" height="auto" />
 <p>Clean, minimalist storefront remake of Soylent’s original layout. Users can browse featured products and learn more about Soylents Products and Ingredients.</p>
 <!-- Animated Screenshot -->
-<img src="public/soylent-animation (1).gif" />
+<img src="public/soylent-animation (1).gif" width="600" height="auto" />
 <p>One of many animated sections within the site</p>
 <!-- Cart & Checkout Screenshot -->
-<img src="public/soylent-checkout.png" />
+<img src="public/soylent-checkout.png" width="600" height="auto" />
 <p>Full checkout simulation powered by Stripe, using a secure Express backend to manage transactions, supporting subscription purchases, one-time purchases and prepaid subscriptions.</p>
 <!-- Product Page Screenshot -->
-<img src="public/soylant-cart.png" />
-<img src="public/soylent-product-types.png" />
+<img src="public/soylant-cart.png" width="600" height="auto" />
+<img src="public/soylent-product-types.png" width="600" height="auto" />
 <p>Each product page includes pricing, flavor options, descriptions, and “Add to Cart” functionality using local storage.</p>
 <!-- ========== TECH SECTION ========== -->
 <h2>Tech Used</h2>
