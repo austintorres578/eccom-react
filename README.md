@@ -35,7 +35,7 @@ Developed using **React** on the frontend and a secure **Express.js backend** to
 <br><br />
 
 <!-- Test Credit Card and project details -->
-<img src="public/soylent-test-card.jpeg" />
+<img src="public/soylent-test-card.jpeg" width="437.99" height="233.66" />
 <br><br />
 <p>Project details as well as test credit card numbers to check out using stripes payment gateway</p>
 <br><br />
