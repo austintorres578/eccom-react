@@ -34,7 +34,7 @@ Developed using **React** on the frontend and a secure **Express.js backend** to
 <img src="public/soylent-banner.png" />
 <p>Clean, minimalist storefront remake of Soylent’s original layout. Users can browse featured products and learn more about Soylents Products and Ingredients.</p>
 <!-- Animated Screenshot -->
-<img src="#" />
+<img src="public/soylent-animation (1).gif" />
 <p>One of many animated sections within the site</p>
 <!-- Cart & Checkout Screenshot -->
 <img src="public/soylent-checkout.png" />
