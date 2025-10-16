@@ -1,4 +1,4 @@
-<h1>Soylent E-Commerce Clone</h1>
+<h1>Soylent E-Commerce React Clone</h1>
 
 <!-- Banner Image Placeholder -->
 <!-- Replace with an image like /public/readMeBanner.png -->
