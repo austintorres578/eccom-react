@@ -29,22 +29,15 @@ Developed using **React** on the frontend and a secure **Express.js backend** to
 <p>Quick Nav to quickly go through the two created pages</p>
 <!-- Test Credit Card and project details -->
 <img src="public/soylent-test-card.jpeg" width="437.99" height="233.66" />
-<br><br />
 <p>Project details as well as test credit card numbers to check out using stripes payment gateway</p>
-<br><br />
 <!-- Homepage Screenshot -->
 <img src="public/homepage.png" />
-<br><br />
 <p>Clean, minimalist storefront inspired by Soylent’s original layout. Users can browse featured products and explore categories.</p>
-<br><br />
 <!-- Product Page Screenshot -->
 <img src="public/product-page.png" />
-<br><br />
 <p>Each product page includes pricing, flavor options, descriptions, and animated “Add to Cart” functionality.</p>
-<br><br />
 <!-- Cart & Checkout Screenshot -->
 <img src="public/checkout.png" />
-<br><br />
 <p>Full checkout simulation powered by Stripe, using a secure Express backend to manage transactions.</p>
 
 <!-- ========== TECH SECTION ========== -->
